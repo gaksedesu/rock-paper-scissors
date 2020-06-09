@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors game</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+    console.log("Hello, World!");
+
+    function computerPlay() {
+        let computerChoice = integerRandom( 1, 3);
+        if (computerChoice == 1) {
+            return 'Paper'
+        } else if (computerChoice == 2) {
+            return 'Scissors'
+        } else {
+            return 'Rock'
+        };
+    };
+
+    function integerRandom(lower, upper) {
+        return Math.floor(Math.random()*(upper - lower + 1)) + 1;
+    };
+
+  </script>
+</body>
+</html>
