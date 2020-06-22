@@ -47,18 +47,13 @@
     };
 
     function game() {
-      let playerSelection = checkPlayerSelection();
-      let computerSelection = computerPlay();
-      let result = singleRound( playerSelection, computerSelection);
-      console.log(result);
       let points = 0;
-      if (result[4] == 'w') {
-        points = points + 1;
-        console.log('The score is: ' + points + '/5.');
-      } else {
-        console.log('The score is: ' + points + '/5.');
-      };
+      let playerSelection;
+      let computerSelection;
+      let result;
+      let totalPointsgiven = 0;
 
+      while (totalPointsgiven <= 5 && points < 3) {
       playerSelection = checkPlayerSelection();
       computerSelection = computerPlay();
       result = singleRound( playerSelection, computerSelection);
@@ -69,38 +64,9 @@
       } else {
         console.log('The score is: ' + points + '/5.');
       };
-
-      playerSelection = checkPlayerSelection();
-      computerSelection = computerPlay();
-      result = singleRound( playerSelection, computerSelection);
-      console.log(result);
-      if (result[4] == 'w') {
-        points = points + 1;
-        console.log('The score is: ' + points + '/5.');
-      } else {
-        console.log('The score is: ' + points + '/5.');
+      if (result != "It's a draw") {
+        totalPointsgiven += 1;
       };
-
-      playerSelection = checkPlayerSelection();
-      computerSelection = computerPlay();
-      result = singleRound( playerSelection, computerSelection);
-      console.log(result);
-      if (result[4] == 'w') {
-        points = points + 1;
-        console.log('The score is: ' + points + '/5.');
-      } else {
-        console.log('The score is: ' + points + '/5.');
-      };
-
-      playerSelection = checkPlayerSelection();
-      computerSelection = computerPlay();
-      result = singleRound( playerSelection, computerSelection);
-      console.log(result);
-      if (result[4] == 'w') {
-        points = points + 1;
-        console.log('The score is: ' + points + '/5.');
-      } else {
-        console.log('The score is: ' + points + '/5.');
       };
 
       if (points >= 3) {
